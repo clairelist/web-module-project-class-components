@@ -40,6 +40,54 @@ class App extends React.Component {
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
+
+  constructor(){
+    super();
+    this.state={
+      todos: todos
+    }
+  }
+
+  //LOGIC
+  handleToggle = () => {
+    this.setState({
+      ...this.state,
+      todos: this.state.todos.filter(task=>{
+        return (!task.completed);
+      })
+    });
+  }
+
+  handleAddTask = (title) => {
+    // const count = this.todos.id; //increase count on newly created task, such that we will have a unique id per each new task made!
+
+    const count=this.todos.length;
+
+    const newTask={
+      task: title,
+      id: count++,
+      completed: 0 //not an int!
+    };
+
+    this.setState({
+      ...this.state,
+      todos: [...this.state.todos, newTask]
+    });
+  }
+
+  handleToggleTask=(task)=>{
+    this.setState({
+      ...this.state,
+      todos: this.state.todos.map(tsk => {
+        if (tsk.id === task.id) {
+          return {...tsk, completed: !tsk.completed}
+        } else {
+          return tsk;
+        }
+      })
+    })
+  }
+
   render() {
     return (
       <div>
