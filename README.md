@@ -14,6 +14,7 @@ In this project you will build an application that allows for todos to be added,
 - Use the following gif as base for building DOM:
 
 ![Todo App MVP](./todo.gif)
+ARB EDIT FOR PUSH
 
 - Hold all todos in state within the App.js component. That todos state slice should look like the following:
 ```js
