@@ -92,6 +92,10 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <h2>Your current TODOS are:</h2>
+        {/* <TodoList />
+        <TodoForm /> --needful build these out, add button onclick to below!*/}
+        <button>ADD a TASK!</button>
       </div>
     );
   }
