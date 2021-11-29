@@ -61,11 +61,11 @@ class App extends React.Component {
   handleAddTask = (title) => {
     // const count = this.todos.id; //increase count on newly created task, such that we will have a unique id per each new task made!
 
-    const count=this.todos.length;
+   
 
     const newTask={
       task: title,
-      id: count++,
+      id: Date.now,
       completed: 0 //not an int!
     };
 
@@ -94,8 +94,8 @@ class App extends React.Component {
         <h2>Welcome to your Todo App!</h2>
         <h2>Your current TODOS are:</h2>
         {/* <TodoList />
-        <TodoForm /> --needful build these out, add button onclick to below!*/}
-        <button>ADD a TASK!</button>
+         --needful build these out, add button onclick to below!*/}
+       <TodoForm handleAddTask={this.handleAddTask}/>
       </div>
     );
   }
