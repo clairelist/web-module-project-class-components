@@ -5,6 +5,35 @@ import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
+//! 'TODO' is currently reserved by a namespace; will be ommitted here.
+//using 'needful' instead
+
+//needful: shape of data, state (see in app class)
+//keys in our data:: task, id, completed
+
+const todos = [
+{
+    task: 'laundry',
+    id: 1,
+    completed: 0 //NOT an int! BOOL value!!
+},
+{
+    task: 'dishes',
+    id: 2,
+    completed: 0
+},
+{
+  task: 'clean room',
+  id: 3,
+  completed: 0
+},
+{
+  task: 'do coding homework',
+  id: 4,
+  completed: 0
+}
+];
+
 
 //LOGIC PSEUD FUNCTION section
 class App extends React.Component {
