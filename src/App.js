@@ -95,6 +95,7 @@ class App extends React.Component {
         <h2>Your current TODOS are:</h2>
         {/* <TodoList />
          --needful build these out, add button onclick to below!*/}
+         <TodoList  handleToggle={this.handleToggle} todos={this.state.todos} />
        <TodoForm handleAddTask={this.handleAddTask}/>
       </div>
     );
